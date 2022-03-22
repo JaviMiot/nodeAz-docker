@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  webapp:
+    build: .
+    container_name: testDocker
+    ports:
+      - 4000:4000
+    volumes:
+      - .:/usr/src
+    environment:
+      LOCALVAR: ${LOCALVAR}
